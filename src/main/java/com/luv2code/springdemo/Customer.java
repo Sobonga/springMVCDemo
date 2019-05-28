@@ -1,13 +1,15 @@
 package com.luv2code.springdemo;
 
 import com.sun.istack.internal.NotNull;
+import validation.CourseCode;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
-public class Customer {
+public class Customer implements Serializable {
 
     private String firstName;
 
@@ -21,6 +23,17 @@ public class Customer {
 
     @Pattern ( regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 chars/digits")
     private String postalCode;
+
+/*    @CourseCode(value = "TOPS",message = "must start with TOPS")
+    private String courseCode;
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
+    }*/
 
     public String getFirstName() {
         return firstName;
@@ -53,4 +66,6 @@ public class Customer {
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
+
+
 }
