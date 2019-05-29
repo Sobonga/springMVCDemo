@@ -7,9 +7,8 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
 
-public class Customer implements Serializable {
+public class Customer {
 
     private String firstName;
 
