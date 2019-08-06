@@ -7,8 +7,8 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
 
     private String coursePrefix;
     @Override
-    public void initialize(CourseCode constraintAnnotation) {
-            coursePrefix = constraintAnnotation.value ();
+    public void initialize(CourseCode theCourseCode) {
+            coursePrefix = theCourseCode.value ();
     }
 
     @Override
